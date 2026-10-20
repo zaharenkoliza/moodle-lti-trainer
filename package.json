@@ -1,0 +1,10 @@
+{
+  "name": "moodle-lti-trainer",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test test/worker.test.mjs",
+    "build": "bash scripts/build.sh",
+    "validate": "node scripts/validate-artifact.mjs"
+  }
+}
