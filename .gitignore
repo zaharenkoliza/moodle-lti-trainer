@@ -1,2 +1,4 @@
-dist/
-site.tar.gz
+node_modules/
+.env
+data/
+tool-public-key.pem

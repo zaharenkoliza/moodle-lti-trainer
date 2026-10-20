@@ -1,0 +1,29 @@
+services:
+  - type: web
+    name: liza-moodle-lti-13
+    runtime: docker
+    plan: free
+    healthCheckPath: /healthz
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: APP_LABEL
+        value: 'Практикум: JavaScript, HTTP и голосовой интерфейс'
+      - key: ATTEMPTS_DB_NAME
+        value: lti_lab_attempts
+      - key: PUBLIC_URL
+        sync: false
+      - key: MONGO_URL
+        sync: false
+      - key: MOODLE_ISSUER
+        sync: false
+      - key: MOODLE_CLIENT_ID
+        sync: false
+      - key: MOODLE_DEPLOYMENT_ID
+        sync: false
+      - key: MOODLE_AUTH_URL
+        sync: false
+      - key: MOODLE_TOKEN_URL
+        sync: false
+      - key: MOODLE_JWKS_URL
+        sync: false

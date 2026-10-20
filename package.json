@@ -1,10 +1,18 @@
 {
-  "name": "moodle-lti-trainer",
+  "name": "moodle-lti-three-tasks-lab",
+  "version": "1.0.0",
   "private": true,
   "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
   "scripts": {
-    "test": "node --test test/worker.test.mjs",
-    "build": "bash scripts/build.sh",
-    "validate": "node scripts/validate-artifact.mjs"
+    "start": "node --env-file=.env src/server.mjs",
+    "test": "node --test test/*.test.mjs"
+  },
+  "dependencies": {
+    "express": "5.2.1",
+    "ltijs": "7.0.7",
+    "mongodb": "7.7.0"
   }
 }
